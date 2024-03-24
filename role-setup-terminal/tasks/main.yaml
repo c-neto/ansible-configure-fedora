@@ -39,19 +39,19 @@
 - name: customize zsh
   ansible.builtin.copy:
     src: dotfiles/.zshrc
-    dest: $HOME/.zshrc
+    dest: "$HOME/.zshrc"
     mode: u+rw,g-r,o-r
 
 - name: customize starship
   ansible.builtin.copy:
     src: dotfiles/starship.toml
-    dest: $HOME/.config/starship.toml
+    dest: "$HOME/.config/starship.toml"
     mode: u+rw,g-r,o-r
 
 - name: install zsh-syntax-highlighting
   ansible.builtin.git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    dest: $HOME/.my-custom-zsh/zsh-syntax-highlighting
+    dest: "$HOME/.my-custom-zsh/zsh-syntax-highlighting"
     single_branch: yes
     depth: 1
 
@@ -72,7 +72,7 @@
 - name: install - kubetail
   ansible.builtin.git:
     repo: https://github.com/johanhaleby/kubetail.git
-    dest: $HOME/.my-custom-zsh/custom/plugins/kubetail
+    dest: "$HOME/.my-custom-zsh/custom/plugins/kubetail"
     single_branch: yes
     depth: 1
 
