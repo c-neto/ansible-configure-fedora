@@ -140,3 +140,6 @@ bindkey '^[[Z' reverse-menu-complete
 
 # Delete characters using the "delete" key
 bindkey "^[[3~" delete-char
+
+# enable reverse interactive search by CTRL + R
+bindkey "^R" history-incremental-pattern-search-backward
