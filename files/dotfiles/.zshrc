@@ -74,6 +74,9 @@ export WORDCHARS=""
 # Set the location and filename of the history file
 HISTFILE="$HOME/.zsh_history"
 
+# disable CTRL + S and CTRL + Q
+stty -ixon
+
 # enable comments "#" expressions in the prompt shell
 setopt INTERACTIVE_COMMENTS
 
